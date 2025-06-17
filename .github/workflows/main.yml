@@ -1,4 +1,4 @@
-name: Releade Node.js app
+name: Release Node.js app
 
 on:
   push:
