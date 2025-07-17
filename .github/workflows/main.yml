@@ -65,4 +65,4 @@ jobs:
           service: ${{ secrets.CLOUD_RUN_SERVICE }}
           image: ${{ secrets.GCP_REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.GCP_REPO }}/${{ secrets.GCP_IMAGE_NAME }}:${{ github.sha }}
           region: ${{ secrets.GCP_REGION }}
-          service_account: ${{ secrets.CLOUD_RUN_SERVICE }}@${{ secrets.GCP_PROJECT_ID }}.iam.gserviceaccount.com
+          flags: --service-account=${{ secrets.CLOUD_RUN_SERVICE }}@${{ secrets.GCP_PROJECT_ID }}.iam.gserviceaccount.com
